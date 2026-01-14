@@ -1,0 +1,7 @@
+{
+  "name": "University of Hyderabad Speech Data Collection Tool",
+  "description": "An academic research instrument for collecting speech data in Telugu. Designed with a minimal, distraction-free interface for high-quality audio recordings.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}

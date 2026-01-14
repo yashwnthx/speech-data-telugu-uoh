@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="te">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University of Hyderabad - Speech Data Collection Tool</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600&family=Space+Mono:wght@400;700&family=Noto+Sans+Telugu:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            /* Cream / Off-white academic palette */
+            --bg: #fdfaf5; 
+            --fg: #000000;
+            --muted: #666666;
+            --border: #d1d1d1;
+            --accent: #d32f2f; /* Academic red accent */
+            
+            --font-body: 'IBM Plex Mono', monospace;
+            --font-tech: 'Space Mono', monospace;
+            --font-telugu: 'Noto Sans Telugu', sans-serif;
+            
+            --transition-fast: 120ms linear;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--fg);
+            font-family: var(--font-body);
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .academic-border {
+            border: 1px solid var(--border);
+        }
+
+        .telugu-text {
+            font-family: var(--font-telugu);
+            line-height: 1.8;
+            font-size: 1.5rem;
+        }
+
+        button.btn-record {
+            font-family: var(--font-tech);
+            border: 2px solid var(--fg);
+            transition: all var(--transition-fast);
+        }
+
+        button.btn-record:hover:not(:disabled) {
+            background-color: var(--fg);
+            color: var(--bg);
+        }
+
+        button.btn-record.recording {
+            border-color: var(--accent);
+            color: var(--accent);
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.6; }
+            100% { opacity: 1; }
+        }
+
+        .waveform-container {
+            height: 60px;
+            background: rgba(0,0,0,0.02);
+            border-top: 1px solid var(--border);
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3"
+  }
+}
+</script>
+</head>
+<body>
+    <div id="root"></div>
+</body>
+</html>
